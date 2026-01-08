@@ -18,28 +18,6 @@ JambuFish Store adalah proyek Tugas Akhir mata kuliah Komputasi Awan (Cloud Comp
 
 Fokus utama aplikasi ini adalah jual-beli item game Roblox Fish It, dengan fitur manajemen stok real-time, integrasi WhatsApp otomatis, dan panel admin yang dinamis.
 
-🛠️ Tech Stack
-
-Aplikasi ini dibangun menggunakan teknologi modern yang efisien:
-
-Kategori, Teknologi, Deskripsi, Frontend, Library UI untuk interaktivitas yang cepat.
-
-Styling
-
-Framework CSS utility-first untuk desain responsif & Glassmorphism.
-
-Database
-
-Database PostgreSQL real-time (BaaS).
-
-Storage
-
-Penyimpanan objek untuk gambar produk.
-
-Hosting
-
-Hosting statis & CDN global untuk performa maksimal.
-
 ☁️ Arsitektur Cloud
 
 Sistem ini menerapkan prinsip 3-Tier Serverless Architecture:
@@ -57,31 +35,32 @@ Bucket penyimpanan awan yang terpisah khusus untuk file biner (gambar produk), m
 
 🛒 Untuk Pembeli (User)
 
-🚀 Katalog Real-time: Stok dan harga selalu update tanpa refresh halaman.
+1 Katalog Real-time: Stok dan harga selalu update tanpa refresh halaman.
 
-🔍 Smart Filtering: Cari item berdasarkan kategori (Limited, Secret, Mutation, dll).
+2 Smart Filtering: Cari item berdasarkan kategori (Limited, Secret, Mutation, dll).
 
-⚡ Indikator Stok: Label "Sisa 1!" otomatis muncul saat stok menipis (FOMO).
+3 Indikator Stok: Label "Sisa 1!" otomatis muncul saat stok menipis (FOMO).
 
-🏷️ Diskon System: Menampilkan harga coret dan persentase hemat secara otomatis.
+4 Diskon System: Menampilkan harga coret dan persentase hemat secara otomatis.
 
-📱 WhatsApp Gateway: Checkout instan ke WhatsApp Admin dengan format pesan rapi.
+5 WhatsApp Gateway: Checkout instan ke WhatsApp Admin dengan format pesan rapi.
 
-⭐ Ulasan Publik: Fitur Social Proof dimana pembeli bisa meninggalkan testimoni.
+6 Ulasan Publik: Fitur Social Proof dimana pembeli bisa meninggalkan testimoni.
 
-🎣 Layanan Joki: Tab khusus untuk jasa joki (AFK, Rod) dengan popup detail harga.
+7 Layanan Joki: Tab khusus untuk jasa joki (AFK, Rod) dengan popup detail harga.
+
 
 🔐 Untuk Penjual (Admin Panel)
 
-🛠️ Manajemen Produk Lengkap: Tambah, Edit, Hapus (CRUD) produk dengan mudah.
+1 Manajemen Produk Lengkap: Tambah, Edit, Hapus (CRUD) produk dengan mudah.
 
-🖼️ Upload Gambar Instan: Integrasi langsung upload file dari komputer ke Cloud Storage.
+2 Upload Gambar Instan: Integrasi langsung upload file dari komputer ke Cloud Storage.
 
-💰 Pengaturan Harga: Input harga asli dan harga diskon, sistem menghitung sisanya.
+3 Pengaturan Harga: Input harga asli dan harga diskon, sistem menghitung sisanya.
 
-📦 Kontrol Stok: Update jumlah stok secara langsung.
+4 Kontrol Stok: Update jumlah stok secara langsung.
 
-⚙️ Panduan Instalasi (Lokal)
+5 Panduan Instalasi (Lokal)
 
 Ingin menjalankan proyek ini di komputer Anda? Ikuti langkah mudah ini:
 
