@@ -8,11 +8,6 @@ Aplikasi e-commerce berbasis cloud yang cepat, ringan, dan aman untuk transaksi 
 <a href="https://jambufish.my.id"><strong>Kunjungi Website Live »</strong></a>
 <br />
 <br />
-<a href="#demo">Lihat Demo</a>
-·
-<a href="#fitur">Fitur Utama</a>
-·
-<a href="#instalasi">Cara Instalasi</a>
 </p>
 
 </div>
