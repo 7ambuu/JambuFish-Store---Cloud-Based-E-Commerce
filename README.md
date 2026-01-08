@@ -1,110 +1,112 @@
-JambuFish Store - Cloud Based E-Commerce
+<div align="center">
+<h1 align="center">🐟 JambuFish Store</h1>
+<h3 align="center">Modern Serverless E-Commerce for Roblox Items</h3>
 
-JambuFish Store adalah aplikasi web e-commerce mini berbasis cloud (Serverless) yang dirancang untuk transaksi jual beli item game Roblox Fish It. Aplikasi ini dibangun untuk memenuhi tugas akhir mata kuliah Komputasi Awan (Cloud Computing).
+<p align="center">
+Aplikasi e-commerce berbasis cloud yang cepat, ringan, dan aman untuk transaksi item game digital.
+<br />
+<a href="https://www.google.com/search?q=https://jambufish.my.id"><strong>Kunjungi Website Live »</strong></a>
+<br />
+<br />
+<a href="#demo">Lihat Demo</a>
+·
+<a href="#fitur">Fitur Utama</a>
+·
+<a href="#instalasi">Cara Instalasi</a>
+</p>
 
-🔗 Live Demo: https://jambufish.my.id 
+</div>
 
-☁️ Arsitektur Sistem
+📖 Tentang Proyek
 
-Proyek ini mengimplementasikan arsitektur Serverless dengan memanfaatkan 3 layanan cloud utama:
+JambuFish Store adalah proyek Tugas Akhir mata kuliah Komputasi Awan (Cloud Computing). Aplikasi ini dirancang untuk mendemonstrasikan implementasi arsitektur Serverless dalam membangun platform e-commerce yang scalable tanpa perlu mengelola server fisik.
 
-1. Cloud Hosting / CDN (Frontend)
+Fokus utama aplikasi ini adalah jual-beli item game Roblox Fish It, dengan fitur manajemen stok real-time, integrasi WhatsApp otomatis, dan panel admin yang dinamis.
 
-Layanan: Netlify.
+🛠️ Tech Stack
 
-Fungsi: Menyimpan dan menyajikan file statis (HTML, CSS, JS) kepada pengguna melalui jaringan Content Delivery Network (CDN) global. Netlify juga menangani sertifikat SSL (HTTPS) secara otomatis.
+Aplikasi ini dibangun menggunakan teknologi modern yang efisien:
 
-2. Cloud Database & Serverless API (Backend)
+Kategori, Teknologi, Deskripsi, Frontend, Library UI untuk interaktivitas yang cepat.
 
-Layanan: Supabase (PostgreSQL + PostgREST).
+Styling
 
-Fungsi Database: Menyimpan data relasional terstruktur seperti data produk, stok, kategori, dan ulasan pengguna.
+Framework CSS utility-first untuk desain responsif & Glassmorphism.
 
-Fungsi API (PENTING): Supabase secara otomatis men-generate RESTful API dari skema database.
+Database
 
-Frontend tidak terhubung langsung ke database via koneksi SQL tradisional.
+Database PostgreSQL real-time (BaaS).
 
-Frontend melakukan request HTTP/HTTPS ke API Gateway Supabase (contoh: GET /rest/v1/products).
+Storage
 
-Ini menghilangkan kebutuhan untuk membangun server backend manual (seperti Node.js/PHP), menjadikan arsitektur ini lebih efisien dan scalable.
+Penyimpanan objek untuk gambar produk.
 
-3. Cloud Object Storage (Media)
+Hosting
 
-Layanan: Supabase Storage.
+Hosting statis & CDN global untuk performa maksimal.
 
-Fungsi: Menyimpan file biner (gambar produk) di bucket penyimpanan awan. Frontend hanya menyimpan URL/Link gambar, sedangkan file fisiknya di-hosting di server penyimpanan terpisah untuk performa optimal.
+☁️ Arsitektur Cloud
 
-🔄 Alur Data (Data Flow)
+Sistem ini menerapkan prinsip 3-Tier Serverless Architecture:
 
-User membuka jambufish.my.id di browser.
+Frontend Layer (Netlify):
+Menyajikan antarmuka pengguna (HTML/JS) melalui CDN global. Menangani SSL/HTTPS secara otomatis untuk keamanan.
 
-Netlify mengirimkan file aplikasi (HTML/JS) ke browser user.
+Application/Database Layer (Supabase Database):
+Menggantikan server backend tradisional. Frontend berkomunikasi langsung dengan database PostgreSQL menggunakan API RESTful yang di-generate otomatis oleh Supabase (PostgREST). Ini menangani logika produk, stok, dan ulasan.
 
-Browser mengeksekusi JavaScript dan menggunakan Supabase Client SDK untuk meminta data.
+Media Layer (Supabase Storage):
+Bucket penyimpanan awan yang terpisah khusus untuk file biner (gambar produk), memastikan database utama tetap ringan dan cepat.
 
-Request dikirim ke API Supabase.
+✨ Fitur Utama
 
-Supabase memverifikasi request, mengambil data dari PostgreSQL, dan mengembalikannya sebagai JSON.
+🛒 Untuk Pembeli (User)
 
-Aplikasi menampilkan daftar ikan dan stok terbaru ke User.
+🚀 Katalog Real-time: Stok dan harga selalu update tanpa refresh halaman.
 
-🚀 Fitur Utama
+🔍 Smart Filtering: Cari item berdasarkan kategori (Limited, Secret, Mutation, dll).
 
-🛒 Sisi Pembeli (Client)
+⚡ Indikator Stok: Label "Sisa 1!" otomatis muncul saat stok menipis (FOMO).
 
-Katalog Real-time: Produk muncul langsung dari database cloud.
+🏷️ Diskon System: Menampilkan harga coret dan persentase hemat secara otomatis.
 
-Smart Filtering: Filter berdasarkan rarity (Limited, Secret, Mutation, dll).
+📱 WhatsApp Gateway: Checkout instan ke WhatsApp Admin dengan format pesan rapi.
 
-Sistem Stok & Diskon: Indikator stok menipis ("Sisa 1!") dan badge diskon otomatis.
+⭐ Ulasan Publik: Fitur Social Proof dimana pembeli bisa meninggalkan testimoni.
 
-WhatsApp Gateway: Checkout pesanan langsung terintegrasi ke WhatsApp Admin dengan format pesan otomatis.
+🎣 Layanan Joki: Tab khusus untuk jasa joki (AFK, Rod) dengan popup detail harga.
 
-Tab Joki: Layanan jasa joki (AFK, Rod) dengan popup detail harga.
+🔐 Untuk Penjual (Admin Panel)
 
-Ulasan Publik: Pembeli dapat menulis ulasan yang tersimpan di cloud.
+🛠️ Manajemen Produk Lengkap: Tambah, Edit, Hapus (CRUD) produk dengan mudah.
 
-🔐 Sisi Penjual (Admin Panel)
+🖼️ Upload Gambar Instan: Integrasi langsung upload file dari komputer ke Cloud Storage.
 
-Manajemen Produk (CRUD): Tambah, Edit, dan Hapus produk secara mudah.
+💰 Pengaturan Harga: Input harga asli dan harga diskon, sistem menghitung sisanya.
 
-Upload Gambar: Upload foto produk langsung ke Cloud Storage.
+📦 Kontrol Stok: Update jumlah stok secara langsung.
 
-Manajemen Harga: Mengatur harga asli (coret) dan harga jual (diskon).
+⚙️ Panduan Instalasi (Lokal)
 
-Kontrol Stok: Mengatur jumlah stok yang tampil di sisi pembeli.
+Ingin menjalankan proyek ini di komputer Anda? Ikuti langkah mudah ini:
 
-📂 Struktur Folder
+1. Clone Repository
 
-JambuFish-Store/
-│
-├── index.html          # Halaman Utama (Frontend Pembeli)
-├── README.md           # Dokumentasi Proyek
-└── admin/
-    └── index.html      # Halaman Panel Admin (Frontend Penjual)
-
-
-⚙️ Cara Instalasi / Setup Lokal
-
-Jika ingin menjalankan project ini di komputer sendiri:
-
-Clone Repository
-
-git clone [https://github.com/username-kalian/jambufish-store.git](https://github.com/username-kalian/jambufish-store.git)
-
-
-Setup Supabase
+2. Konfigurasi Supabase
 
 Buat project baru di Supabase.com.
 
-Masuk ke SQL Editor dan jalankan query berikut untuk membuat tabel:
+Buka menu SQL Editor dan jalankan query berikut untuk membuat tabel:
+
+<details>
+<summary>Click untuk melihat SQL Query</summary>
 
 -- Tabel Produk
 create table products (
   id bigint generated by default as identity primary key,
   name text,
   price bigint,
-  original_price bigint, -- Kolom untuk harga coret (diskon)
+  original_price bigint, -- Untuk harga coret
   stock int default 0,
   category text,
   image text,
@@ -123,23 +125,30 @@ create table reviews (
 );
 
 
+</details>
+
 Buat Storage Bucket baru bernama images dan set ke Public.
 
-Matikan RLS (Row Level Security) pada tabel agar bisa diakses tanpa auth kompleks (untuk tujuan demo tugas).
+Matikan Row Level Security (RLS) pada tabel products dan reviews (untuk kemudahan demo).
 
-Konfigurasi API Key
+3. Hubungkan API Key
 
-Buka file index.html dan admin/index.html.
+Buka file index.html dan admin/index.html, lalu temukan bagian ini dan isi dengan kredensial Supabase Anda:
 
-Cari variabel SUPABASE_CONFIG.
+const SUPABASE_CONFIG = {
+    url: "MASUKKAN_SUPABASE_URL_ANDA",
+    key: "MASUKKAN_SUPABASE_ANON_KEY_ANDA"
+};
 
-Ganti url dan key dengan kredensial dari dashboard Supabase Anda.
 
-Jalankan
+4. Jalankan!
 
-Buka file index.html langsung di browser.
+Cukup buka file index.html di browser Anda (klik dua kali atau gunakan Live Server VS Code).
 
-👥 Anggota Kelompok
+
+👥 Tim Pengembang
+
+Nama Mahasiswa
 
 Azzam Trisna Wibawa
 
@@ -149,4 +158,7 @@ Risky Wijaya
 
 Refando Nofiantoro
 
-Project ini dibuat untuk memenuhi Tugas Besar Mata Kuliah Cloud Computing.
+<div align="center">
+<p>Dibuat dengan ❤️ dan ☕ untuk Tugas Akhir</p>
+<p><strong>Komputasi Awan - 2024</strong></p>
+</div>
