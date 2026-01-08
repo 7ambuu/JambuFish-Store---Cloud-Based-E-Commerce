@@ -5,7 +5,7 @@
 <p align="center">
 Aplikasi e-commerce berbasis cloud yang cepat, ringan, dan aman untuk transaksi item game digital.
 <br />
-<a href="https://www.google.com/search?q=https://jambufish.my.id"><strong>Kunjungi Website Live »</strong></a>
+<a href="https://jambufish.my.id"><strong>Kunjungi Website Live »</strong></a>
 <br />
 <br />
 <a href="#demo">Lihat Demo</a>
